@@ -44,7 +44,14 @@
 
 - (void)addReturnButton
 {
-    
+    UIView *backView = [[UIView alloc]initWithFrame:CGRectMake(0, 0, 26, 26)];
+    JHKPointInsideButton *button = [[JHKPointInsideButton alloc]initWithFrame:CGRectMake(0, 0, 26, 26)];
+    button.sizeType = ButtonSizeTypeCenter;
+    [button setImage:ThemeImage(@"back_arrow") forState:UIControlStateNormal];
+    [button addTarget:self action:@selector(returnKeyBack) forControlEvents:UIControlEventTouchUpInside];
+    [backView addSubview:button];
+    UIBarButtonItem *itemButton = [[UIBarButtonItem alloc]initWithCustomView:backView];
+    self.navigationItem.leftBarButtonItem = itemButton;
 }
 
 - (void)addSmallReturnButton
@@ -56,12 +63,29 @@
 {
     
 }
+
 - (void)addWhiteNormalReturnButton
 {
     
 }
 
 - (void)addNoNavBarButton
+{
+    UIButton *returnBtn = [[UIButton alloc] initWithFrame:CGRectMake(20, self.iphoneStatusBarHeight+16, 26, 26)];
+    [returnBtn setImage:ThemeImage(@"ywart_wallpicture_back") forState:UIControlStateNormal];
+    [returnBtn addTarget:self action:@selector(returnClick) forControlEvents:UIControlEventTouchUpInside];
+    [self.view addSubview:returnBtn];
+}
+
+#pragma mark - ==================== 返回事件 ============================
+- (void)returnKeyBack
+{
+    if (![self.navigationController popViewControllerAnimated:YES]) {
+        [self dismissViewControllerAnimated:YES completion:nil];
+    }
+}
+
+- (void)returnClick
 {
     
 }
@@ -91,6 +115,7 @@
     
     return nil;
 }
+
 //强制横屏
 - (void)forceOrientationLandscape {
     jhkAppDelegate.isForceLandscape=YES;
@@ -111,13 +136,6 @@
     [[UIDevice currentDevice] setValue:@(UIDeviceOrientationPortrait) forKey:@"orientation"];
     //刷新
     [UIViewController attemptRotationToDeviceOrientation];
-}
-
-//可选屏幕
-- (void)forceOrientationAllButDown
-{
-    jhkAppDelegate.isForcePortrait=NO;
-    jhkAppDelegate.isForceLandscape=NO;
 }
 
 @end

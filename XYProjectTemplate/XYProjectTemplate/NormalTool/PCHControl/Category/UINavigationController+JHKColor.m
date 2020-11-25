@@ -10,13 +10,8 @@
 @implementation UINavigationController (JHKColor)
 -(void)changeBackgroundColor:(UIColor *)color
 {
-    if (@available(iOS 13.0, *)) {
-        self.navigationBar.standardAppearance.titleTextAttributes = @{NSForegroundColorAttributeName:color};
-        self.navigationBar.standardAppearance.backgroundColor = color;
-    }else{
-        self.navigationBar.barTintColor = color;
-        self.navigationBar.backgroundColor = color;
-    }
+    self.navigationBar.barTintColor = color;
+    self.navigationBar.backgroundColor = color;
     self.navigationBar.translucent = NO;
 }
 

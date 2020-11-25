@@ -8,7 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		A4766775256DF2B300D7651D /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = A4766774256DF2B300D7651D /* AppDelegate.m */; };
-		A4766778256DF2B300D7651D /* SceneDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = A4766777256DF2B300D7651D /* SceneDelegate.m */; };
 		A476677B256DF2B300D7651D /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A476677A256DF2B300D7651D /* ViewController.m */; };
 		A476677E256DF2B300D7651D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A476677C256DF2B300D7651D /* Main.storyboard */; };
 		A4766780256DF2B500D7651D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A476677F256DF2B500D7651D /* Assets.xcassets */; };
@@ -71,6 +70,15 @@
 		A47668BB256E03A600D7651D /* GTMBase64.m in Sources */ = {isa = PBXBuildFile; fileRef = A47668BA256E03A600D7651D /* GTMBase64.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		A47668C1256E042F00D7651D /* JHKiPhoneScreenTool.m in Sources */ = {isa = PBXBuildFile; fileRef = A47668C0256E042F00D7651D /* JHKiPhoneScreenTool.m */; };
 		A47668CF256E248000D7651D /* LEEAlert.m in Sources */ = {isa = PBXBuildFile; fileRef = A47668CD256E248000D7651D /* LEEAlert.m */; };
+		A47668E2256E27B100D7651D /* JHKBaseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A47668E1256E27B100D7651D /* JHKBaseViewController.m */; };
+		A47668F2256E2E9100D7651D /* JHKNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = A47668F1256E2E9100D7651D /* JHKNavigationController.m */; };
+		A4766907256E3E3400D7651D /* GXAnimationBaseDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = A4766901256E3E3400D7651D /* GXAnimationBaseDelegate.m */; };
+		A4766908256E3E3400D7651D /* GXAnimationPushALDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = A4766904256E3E3400D7651D /* GXAnimationPushALDelegate.m */; };
+		A4766909256E3E3400D7651D /* UIViewController+GXTransitionDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = A4766905256E3E3400D7651D /* UIViewController+GXTransitionDelegate.m */; };
+		A4766912256E412600D7651D /* NextViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A4766911256E412600D7651D /* NextViewController.m */; };
+		A476691E256E49D600D7651D /* JHKTabBarController.m in Sources */ = {isa = PBXBuildFile; fileRef = A476691D256E49D600D7651D /* JHKTabBarController.m */; };
+		A4766936256E4BE000D7651D /* RevealServer.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A4766935256E4BE000D7651D /* RevealServer.framework */; };
+		A4766937256E4BE000D7651D /* RevealServer.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = A4766935256E4BE000D7651D /* RevealServer.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -90,12 +98,24 @@
 		};
 /* End PBXContainerItemProxy section */
 
+/* Begin PBXCopyFilesBuildPhase section */
+		A4766938256E4BE000D7651D /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				A4766937256E4BE000D7651D /* RevealServer.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXFileReference section */
 		A4766770256DF2B300D7651D /* XYProjectTemplate.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = XYProjectTemplate.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A4766773256DF2B300D7651D /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		A4766774256DF2B300D7651D /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		A4766776256DF2B300D7651D /* SceneDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SceneDelegate.h; sourceTree = "<group>"; };
-		A4766777256DF2B300D7651D /* SceneDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SceneDelegate.m; sourceTree = "<group>"; };
 		A4766779256DF2B300D7651D /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
 		A476677A256DF2B300D7651D /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 		A476677D256DF2B300D7651D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -233,6 +253,23 @@
 		A47668CC256E248000D7651D /* LEEAlertHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LEEAlertHelper.h; sourceTree = "<group>"; };
 		A47668CD256E248000D7651D /* LEEAlert.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LEEAlert.m; sourceTree = "<group>"; };
 		A47668CE256E248000D7651D /* LEEAlert.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LEEAlert.h; sourceTree = "<group>"; };
+		A47668E0256E27B100D7651D /* JHKBaseViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JHKBaseViewController.h; sourceTree = "<group>"; };
+		A47668E1256E27B100D7651D /* JHKBaseViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JHKBaseViewController.m; sourceTree = "<group>"; };
+		A47668F0256E2E9100D7651D /* JHKNavigationController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JHKNavigationController.h; sourceTree = "<group>"; };
+		A47668F1256E2E9100D7651D /* JHKNavigationController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JHKNavigationController.m; sourceTree = "<group>"; };
+		A4766901256E3E3400D7651D /* GXAnimationBaseDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GXAnimationBaseDelegate.m; sourceTree = "<group>"; };
+		A4766902256E3E3400D7651D /* UIViewController+GXTransitionDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIViewController+GXTransitionDelegate.h"; sourceTree = "<group>"; };
+		A4766903256E3E3400D7651D /* GXAnimationBaseDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GXAnimationBaseDelegate.h; sourceTree = "<group>"; };
+		A4766904256E3E3400D7651D /* GXAnimationPushALDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GXAnimationPushALDelegate.m; sourceTree = "<group>"; };
+		A4766905256E3E3400D7651D /* UIViewController+GXTransitionDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIViewController+GXTransitionDelegate.m"; sourceTree = "<group>"; };
+		A4766906256E3E3400D7651D /* GXAnimationPushALDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GXAnimationPushALDelegate.h; sourceTree = "<group>"; };
+		A4766910256E412600D7651D /* NextViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NextViewController.h; sourceTree = "<group>"; };
+		A4766911256E412600D7651D /* NextViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NextViewController.m; sourceTree = "<group>"; };
+		A476691C256E49D600D7651D /* JHKTabBarController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JHKTabBarController.h; sourceTree = "<group>"; };
+		A476691D256E49D600D7651D /* JHKTabBarController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JHKTabBarController.m; sourceTree = "<group>"; };
+		A4766923256E4AEF00D7651D /* Reveal.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Reveal.framework; path = ../../../../../Library/Developer/CommandLineTools/SDKs/MacOSX10.15.sdk/System/Library/PrivateFrameworks/Reveal.framework; sourceTree = "<group>"; };
+		A476692C256E4B7C00D7651D /* RevealServer.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RevealServer.framework; path = "../../以前/memerayTest/RevealServer.framework"; sourceTree = "<group>"; };
+		A4766935256E4BE000D7651D /* RevealServer.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RevealServer.framework; path = "../../../Library/Application Support/Reveal/RevealServer/iOS/RevealServer.framework"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -240,6 +277,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A4766936256E4BE000D7651D /* RevealServer.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -267,6 +305,7 @@
 				A476678E256DF2B500D7651D /* XYProjectTemplateTests */,
 				A4766799256DF2B500D7651D /* XYProjectTemplateUITests */,
 				A4766771256DF2B300D7651D /* Products */,
+				A4766922256E4AEF00D7651D /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -286,10 +325,10 @@
 				A47667AB256DF36F00D7651D /* NormalTool */,
 				A4766773256DF2B300D7651D /* AppDelegate.h */,
 				A4766774256DF2B300D7651D /* AppDelegate.m */,
-				A4766776256DF2B300D7651D /* SceneDelegate.h */,
-				A4766777256DF2B300D7651D /* SceneDelegate.m */,
 				A4766779256DF2B300D7651D /* ViewController.h */,
 				A476677A256DF2B300D7651D /* ViewController.m */,
+				A4766910256E412600D7651D /* NextViewController.h */,
+				A4766911256E412600D7651D /* NextViewController.m */,
 				A47668A3256DFE0100D7651D /* PrefixHeader.pch */,
 				A476677C256DF2B300D7651D /* Main.storyboard */,
 				A476677F256DF2B500D7651D /* Assets.xcassets */,
@@ -321,6 +360,7 @@
 		A47667AB256DF36F00D7651D /* NormalTool */ = {
 			isa = PBXGroup;
 			children = (
+				A47668DF256E275E00D7651D /* BaseVC */,
 				A47667E0256DFC2800D7651D /* PCHControl */,
 			);
 			path = NormalTool;
@@ -533,6 +573,7 @@
 		A47668B6256E037C00D7651D /* Vender */ = {
 			isa = PBXGroup;
 			children = (
+				A4766900256E3D8E00D7651D /* GXTransition */,
 				A47668CB256E248000D7651D /* LEEAlert */,
 				A47668B7256E03A600D7651D /* GTMBase64 */,
 				A4766804256DFC2900D7651D /* ZFPlayer */,
@@ -560,6 +601,42 @@
 			path = LEEAlert;
 			sourceTree = "<group>";
 		};
+		A47668DF256E275E00D7651D /* BaseVC */ = {
+			isa = PBXGroup;
+			children = (
+				A47668E0256E27B100D7651D /* JHKBaseViewController.h */,
+				A47668E1256E27B100D7651D /* JHKBaseViewController.m */,
+				A47668F0256E2E9100D7651D /* JHKNavigationController.h */,
+				A47668F1256E2E9100D7651D /* JHKNavigationController.m */,
+				A476691C256E49D600D7651D /* JHKTabBarController.h */,
+				A476691D256E49D600D7651D /* JHKTabBarController.m */,
+			);
+			path = BaseVC;
+			sourceTree = "<group>";
+		};
+		A4766900256E3D8E00D7651D /* GXTransition */ = {
+			isa = PBXGroup;
+			children = (
+				A4766903256E3E3400D7651D /* GXAnimationBaseDelegate.h */,
+				A4766901256E3E3400D7651D /* GXAnimationBaseDelegate.m */,
+				A4766906256E3E3400D7651D /* GXAnimationPushALDelegate.h */,
+				A4766904256E3E3400D7651D /* GXAnimationPushALDelegate.m */,
+				A4766902256E3E3400D7651D /* UIViewController+GXTransitionDelegate.h */,
+				A4766905256E3E3400D7651D /* UIViewController+GXTransitionDelegate.m */,
+			);
+			path = GXTransition;
+			sourceTree = "<group>";
+		};
+		A4766922256E4AEF00D7651D /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				A476692C256E4B7C00D7651D /* RevealServer.framework */,
+				A4766935256E4BE000D7651D /* RevealServer.framework */,
+				A4766923256E4AEF00D7651D /* Reveal.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -570,6 +647,7 @@
 				A476676C256DF2B300D7651D /* Sources */,
 				A476676D256DF2B300D7651D /* Frameworks */,
 				A476676E256DF2B300D7651D /* Resources */,
+				A4766938256E4BE000D7651D /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
@@ -691,6 +769,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				A4766897256DFC2900D7651D /* JHKCommonFunc.m in Sources */,
+				A4766907256E3E3400D7651D /* GXAnimationBaseDelegate.m in Sources */,
 				A476686A256DFC2900D7651D /* UIViewController+JHKCommonFunction.m in Sources */,
 				A4766871256DFC2900D7651D /* NSObject+JHKUtil.m in Sources */,
 				A476686E256DFC2900D7651D /* UIView+JHKUnderLine.m in Sources */,
@@ -718,7 +797,10 @@
 				A476686C256DFC2900D7651D /* UIButton+JHKInterval.m in Sources */,
 				A4766878256DFC2900D7651D /* UIImageView+ZFCache.m in Sources */,
 				A476687C256DFC2900D7651D /* UIBarButtonItem+JHKBadge.m in Sources */,
+				A476691E256E49D600D7651D /* JHKTabBarController.m in Sources */,
 				A4766877256DFC2900D7651D /* UIAlertController+ZFPlayerRotation.m in Sources */,
+				A47668E2256E27B100D7651D /* JHKBaseViewController.m in Sources */,
+				A4766909256E3E3400D7651D /* UIViewController+GXTransitionDelegate.m in Sources */,
 				A4766894256DFC2900D7651D /* JHKCommand.m in Sources */,
 				A476687B256DFC2900D7651D /* UIButton+JHKColor.m in Sources */,
 				A4766896256DFC2900D7651D /* JHKHelper.m in Sources */,
@@ -733,19 +815,21 @@
 				A4766879256DFC2900D7651D /* UIViewController+ZFPlayerRotation.m in Sources */,
 				A4766891256DFC2900D7651D /* JHKPhotoLibrary.m in Sources */,
 				A4766886256DFC2900D7651D /* NSArray+JHKLog.m in Sources */,
+				A4766912256E412600D7651D /* NextViewController.m in Sources */,
 				A4766869256DFC2900D7651D /* UINavigationController+JHKColor.m in Sources */,
 				A476687F256DFC2900D7651D /* NSNull+JHKSafeNull.m in Sources */,
 				A47668C1256E042F00D7651D /* JHKiPhoneScreenTool.m in Sources */,
 				A4766885256DFC2900D7651D /* UIView+JHKLayout.m in Sources */,
-				A4766778256DF2B300D7651D /* SceneDelegate.m in Sources */,
 				A4766875256DFC2900D7651D /* UIWindow+ZFCurrentViewController.m in Sources */,
 				A4766867256DFC2900D7651D /* UIButton+LXMImagePosition.m in Sources */,
 				A4766868256DFC2900D7651D /* NSString+JHKURL.m in Sources */,
 				A4766898256DFC2900D7651D /* JHKTerminal.m in Sources */,
 				A4766880256DFC2900D7651D /* NSString+JHKUtil.m in Sources */,
+				A4766908256E3E3400D7651D /* GXAnimationPushALDelegate.m in Sources */,
 				A476687A256DFC2900D7651D /* NSMutableString+JHKUtil.m in Sources */,
 				A476688B256DFC2900D7651D /* UITextField+JHKUtil.m in Sources */,
 				A476688A256DFC2900D7651D /* UINavigationController+JHKTool.m in Sources */,
+				A47668F2256E2E9100D7651D /* JHKNavigationController.m in Sources */,
 				A4766872256DFC2900D7651D /* UIView+JHKUtil.m in Sources */,
 				A4766895256DFC2900D7651D /* JHKSystemUtil.m in Sources */,
 			);
@@ -920,16 +1004,21 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(USER_LIBRARY_DIR)/Application\\ Support/Reveal/RevealServer/iOS",
+				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = /Users/yangxiaoyu/Desktop/XYProjectTemplate/XYProjectTemplate/XYProjectTemplate/PrefixHeader.pch;
 				INFOPLIST_FILE = XYProjectTemplate/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = XY.XYProjectTemplate;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -939,16 +1028,21 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(USER_LIBRARY_DIR)/Application\\ Support/Reveal/RevealServer/iOS",
+				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = /Users/yangxiaoyu/Desktop/XYProjectTemplate/XYProjectTemplate/XYProjectTemplate/PrefixHeader.pch;
 				INFOPLIST_FILE = XYProjectTemplate/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = XY.XYProjectTemplate;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};

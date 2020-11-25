@@ -46,7 +46,7 @@ NSString * const ThemeDidChangeNotification = @"me.ilvu.theme.change";
         return image;
     }
     
-    NSString *directory = [NSString stringWithFormat:@"%@/%@", kThemeName,[self theme]];
+    NSString *directory = [NSString stringWithFormat:@"%@/%@/image", kThemeName,[self theme]];
     if ([imageName rangeOfString:@"/"].location>0 && [imageName rangeOfString:@"/"].location<NSIntegerMax) {
         NSArray *dirs = [imageName componentsSeparatedByString:@"/"];
         NSString *ndir = [imageName stringByReplacingOccurrencesOfString:[dirs lastObject] withString:@""];
