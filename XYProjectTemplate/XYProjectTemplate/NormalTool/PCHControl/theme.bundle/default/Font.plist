@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>Normal_Font_F1</key>
+	<string>36</string>
+	<key>Normal_Font_F2</key>
+	<string>32</string>
+	<key>Normal_Font_F3</key>
+	<string>30</string>
+	<key>Normal_Font_F4</key>
+	<string>28</string>
+	<key>Normal_Font_F5</key>
+	<string>24</string>
+	<key>Normal_Font_F6</key>
+	<string>20</string>
+</dict>
+</plist>
