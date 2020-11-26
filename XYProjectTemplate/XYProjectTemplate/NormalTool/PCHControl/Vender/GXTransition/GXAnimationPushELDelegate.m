@@ -1,14 +1,16 @@
 //
-//  GXAnimatedPPushDelegate.m
+//  GXAnimatedSPushDelegate.m
 //  GXTransitionSample
 //
 //  Created by Gin on 2020/4/7.
 //  Copyright © 2020 gin. All rights reserved.
 //
 
-#import "GXAnimationPushALDelegate.h"
+#import "GXAnimationPushELDelegate.h"
 
-@implementation GXAnimationPushALDelegate
+#define GX_ANIMATED_SCALE 1.0f
+
+@implementation GXAnimationPushELDelegate
 
 #pragma mark - Overwrite
 
@@ -17,19 +19,24 @@
     UIViewController *toVC = [transitionContext viewControllerForKey:UITransitionContextToViewControllerKey];
     [transitionContext.containerView addSubview:toVC.view];
 
+    UIView *fromSnapshotView = [fromVC.view snapshotViewAfterScreenUpdates:NO];
+    [transitionContext.containerView addSubview:fromSnapshotView];
+    [transitionContext.containerView bringSubviewToFront:toVC.view];
+    fromVC.view.hidden = YES;
+    
     CGRect frame = toVC.view.frame;
     frame.origin.x = toVC.view.bounds.size.width;
     toVC.view.frame = frame;
     frame.origin.x = 0.0f;
-    CGRect fromFrame = fromVC.view.frame;
-    fromFrame.origin.x = -fromVC.view.frame.size.width;
 
-    [self addBackgroundViewToView:fromVC.view];
+    [self addBackgroundViewToView:fromSnapshotView];
+    [self addShadowToView:toVC.view];
     [self animateWithContext:transitionContext isPresent:YES animations:^{
         toVC.view.frame = frame;
-        fromVC.view.frame = fromFrame;
+        fromSnapshotView.transform = CGAffineTransformMakeScale(GX_ANIMATED_SCALE, GX_ANIMATED_SCALE);
     } completion:^(BOOL finished) {
-        
+        fromVC.view.hidden = NO;
+        [fromSnapshotView removeFromSuperview];
     }];
 }
 
@@ -40,32 +47,21 @@
         [transitionContext.containerView addSubview:toVC.view];
         [transitionContext.containerView bringSubviewToFront:fromVC.view];
     }
-    //
+
     CGRect frame = fromVC.view.frame;
     frame.origin.x = 0.0f;
     fromVC.view.frame = frame;
     frame.origin.x = fromVC.view.bounds.size.width;
-    //
-    CGRect toFrame = fromVC.view.frame;
-    toFrame.origin.x = -toVC.view.frame.size.width;
-    toVC.view.frame = toFrame;
-    toFrame.origin.x = 0.0f;
-    //
+    CGAffineTransform transform = CGAffineTransformMakeScale(GX_ANIMATED_SCALE, GX_ANIMATED_SCALE);
+    toVC.view.transform = transform;
     
-    //当toVC为根目录时，使用rootVC
-    UITabBarController *rootVC = (UITabBarController*)[jhkAppDelegate.window rootViewController];
-    CGRect rootFrame = rootVC.tabBar.frame;
-    rootFrame.origin.x = 0.0f;
-    //
     [self addBackgroundViewToView:toVC.view];
+    [self addShadowToView:fromVC.view];
     [self animateWithContext:transitionContext isPresent:NO animations:^{
         fromVC.view.frame = frame;
-        toVC.view.frame = toFrame;
-        if (toVC.navigationController.childViewControllers.count == 1) {
-            rootVC.tabBar.frame = rootFrame;
-        }
+        toVC.view.transform = CGAffineTransformIdentity;
     } completion:^(BOOL finished) {
-
+        toVC.view.transform = CGAffineTransformIdentity;
     }];
 }
 

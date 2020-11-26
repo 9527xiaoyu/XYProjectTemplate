@@ -9,16 +9,17 @@
 #import "UIViewController+GXTransitionDelegate.h"
 #import <objc/runtime.h>
 #import "GXAnimationPushALDelegate.h"
+#import "GXAnimationPushELDelegate.h"
 #import "JHKNavigationController.h"
 
 @implementation UIViewController (GXTransitionDelegate)
 
 - (void)setGx_animatedDelegate:(GXAnimationBaseDelegate *)gx_animatedDelegate {
-    objc_setAssociatedObject(self, _cmd, gx_animatedDelegate, OBJC_ASSOCIATION_RETAIN_NONATOMIC);
+    objc_setAssociatedObject(self, @selector(gx_animatedDelegate), gx_animatedDelegate, OBJC_ASSOCIATION_RETAIN_NONATOMIC);
 }
 
 - (GXAnimationBaseDelegate *)gx_animatedDelegate {
-    return objc_getAssociatedObject(self, _cmd);
+    return objc_getAssociatedObject(self, @selector(gx_animatedDelegate));
 }
 
 #pragma mark - Utility
@@ -35,6 +36,9 @@
 
 - (void)gotoViewController:(UIViewController*)vc isPush:(BOOL)isPush style:(GXAnimationStyle)style interacting:(BOOL)interacting completion:(void (^ __nullable)(void))completion {
     switch (style) {
+        case GXAnimationStylePushEdgeLeft:
+            self.gx_animatedDelegate = [[GXAnimationPushELDelegate alloc] init];
+            break;
         case GXAnimationStylePushAllLeft:
             self.gx_animatedDelegate = [[GXAnimationPushALDelegate alloc] init];
             break;

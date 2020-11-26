@@ -7,6 +7,8 @@
 
 #import "AppDelegate.h"
 #import "JHKTabBarController.h"
+#import "ViewController.h"
+#import "JHKNavigationController.h"
 
 @interface AppDelegate ()<UITabBarControllerDelegate>
 

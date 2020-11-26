@@ -6,6 +6,7 @@
 //
 
 #import "NextViewController.h"
+#import "SecondViewController.h"
 
 @interface NextViewController ()
 
@@ -15,20 +16,21 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    self.view.backgroundColor = nC10_FFFFFF_white;
     // Do any additional setup after loading the view.
-    self.view.backgroundColor = nC1_EE403C_red;
-    [self addReturnButton];
+    UIButton *button = [[UIButton alloc]initWithFrame:CGRectMake(0, 0, 40, 40)];
+    [button setBackgroundColor: nC2_000000_black];
+    [button addTarget:self action:@selector(buttonClick) forControlEvents:UIControlEventTouchUpInside];
+    button.center = self.view.center;
+    [self.view addSubview:button];
 }
 
-/*
-#pragma mark - Navigation
-
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
+- (void)buttonClick
+{
+    SecondViewController *viewC = [[SecondViewController alloc]init];
+    [self pushViewController:viewC style:GXAnimationStylePushAllLeft interacting:YES];
 }
-*/
+
 
 - (void)dealloc
 {

@@ -79,6 +79,8 @@
 		A476691E256E49D600D7651D /* JHKTabBarController.m in Sources */ = {isa = PBXBuildFile; fileRef = A476691D256E49D600D7651D /* JHKTabBarController.m */; };
 		A4766936256E4BE000D7651D /* RevealServer.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A4766935256E4BE000D7651D /* RevealServer.framework */; };
 		A4766937256E4BE000D7651D /* RevealServer.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = A4766935256E4BE000D7651D /* RevealServer.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		A47825C8256F52EF006E5299 /* GXAnimationPushELDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = A47825C6256F52EF006E5299 /* GXAnimationPushELDelegate.m */; };
+		A47825D8256F890F006E5299 /* SecondViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A47825D7256F890F006E5299 /* SecondViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -267,9 +269,11 @@
 		A4766911256E412600D7651D /* NextViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NextViewController.m; sourceTree = "<group>"; };
 		A476691C256E49D600D7651D /* JHKTabBarController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JHKTabBarController.h; sourceTree = "<group>"; };
 		A476691D256E49D600D7651D /* JHKTabBarController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JHKTabBarController.m; sourceTree = "<group>"; };
-		A4766923256E4AEF00D7651D /* Reveal.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Reveal.framework; path = ../../../../../Library/Developer/CommandLineTools/SDKs/MacOSX10.15.sdk/System/Library/PrivateFrameworks/Reveal.framework; sourceTree = "<group>"; };
-		A476692C256E4B7C00D7651D /* RevealServer.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RevealServer.framework; path = "../../以前/memerayTest/RevealServer.framework"; sourceTree = "<group>"; };
 		A4766935256E4BE000D7651D /* RevealServer.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RevealServer.framework; path = "../../../Library/Application Support/Reveal/RevealServer/iOS/RevealServer.framework"; sourceTree = "<group>"; };
+		A47825C6256F52EF006E5299 /* GXAnimationPushELDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GXAnimationPushELDelegate.m; sourceTree = "<group>"; };
+		A47825C7256F52EF006E5299 /* GXAnimationPushELDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GXAnimationPushELDelegate.h; sourceTree = "<group>"; };
+		A47825D6256F890F006E5299 /* SecondViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SecondViewController.h; sourceTree = "<group>"; };
+		A47825D7256F890F006E5299 /* SecondViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SecondViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -329,6 +333,8 @@
 				A476677A256DF2B300D7651D /* ViewController.m */,
 				A4766910256E412600D7651D /* NextViewController.h */,
 				A4766911256E412600D7651D /* NextViewController.m */,
+				A47825D6256F890F006E5299 /* SecondViewController.h */,
+				A47825D7256F890F006E5299 /* SecondViewController.m */,
 				A47668A3256DFE0100D7651D /* PrefixHeader.pch */,
 				A476677C256DF2B300D7651D /* Main.storyboard */,
 				A476677F256DF2B500D7651D /* Assets.xcassets */,
@@ -617,6 +623,8 @@
 		A4766900256E3D8E00D7651D /* GXTransition */ = {
 			isa = PBXGroup;
 			children = (
+				A47825C7256F52EF006E5299 /* GXAnimationPushELDelegate.h */,
+				A47825C6256F52EF006E5299 /* GXAnimationPushELDelegate.m */,
 				A4766903256E3E3400D7651D /* GXAnimationBaseDelegate.h */,
 				A4766901256E3E3400D7651D /* GXAnimationBaseDelegate.m */,
 				A4766906256E3E3400D7651D /* GXAnimationPushALDelegate.h */,
@@ -630,9 +638,7 @@
 		A4766922256E4AEF00D7651D /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				A476692C256E4B7C00D7651D /* RevealServer.framework */,
 				A4766935256E4BE000D7651D /* RevealServer.framework */,
-				A4766923256E4AEF00D7651D /* Reveal.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -798,12 +804,14 @@
 				A4766878256DFC2900D7651D /* UIImageView+ZFCache.m in Sources */,
 				A476687C256DFC2900D7651D /* UIBarButtonItem+JHKBadge.m in Sources */,
 				A476691E256E49D600D7651D /* JHKTabBarController.m in Sources */,
+				A47825D8256F890F006E5299 /* SecondViewController.m in Sources */,
 				A4766877256DFC2900D7651D /* UIAlertController+ZFPlayerRotation.m in Sources */,
 				A47668E2256E27B100D7651D /* JHKBaseViewController.m in Sources */,
 				A4766909256E3E3400D7651D /* UIViewController+GXTransitionDelegate.m in Sources */,
 				A4766894256DFC2900D7651D /* JHKCommand.m in Sources */,
 				A476687B256DFC2900D7651D /* UIButton+JHKColor.m in Sources */,
 				A4766896256DFC2900D7651D /* JHKHelper.m in Sources */,
+				A47825C8256F52EF006E5299 /* GXAnimationPushELDelegate.m in Sources */,
 				A47668B2256E000600D7651D /* AppDelegate+JHKExtension.m in Sources */,
 				A4766890256DFC2900D7651D /* JHKThemeManager.m in Sources */,
 				A476687D256DFC2900D7651D /* NSDictionary+JHKTool.m in Sources */,

@@ -31,7 +31,7 @@
 
 - (void)setIsForceLandscape:(BOOL)isForceLandscape
 {
-    objc_setAssociatedObject(self, _cmd, @(isForceLandscape), OBJC_ASSOCIATION_RETAIN_NONATOMIC);
+    objc_setAssociatedObject(self, @selector(isForceLandscape), @(isForceLandscape), OBJC_ASSOCIATION_RETAIN_NONATOMIC);
 }
 
 - (BOOL)isForcePortrait
@@ -41,7 +41,7 @@
 
 - (void)setIsForcePortrait:(BOOL)isForcePortrait
 {
-    objc_setAssociatedObject(self, _cmd, @(isForcePortrait), OBJC_ASSOCIATION_RETAIN_NONATOMIC);
+    objc_setAssociatedObject(self, @selector(isForcePortrait), @(isForcePortrait), OBJC_ASSOCIATION_RETAIN_NONATOMIC);
 }
 
 @end

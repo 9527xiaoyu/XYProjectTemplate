@@ -6,7 +6,7 @@
 //
 
 #import "JHKTabBarController.h"
-#import "NextViewController.h"
+#import "ViewController.h"
 #import "JHKNavigationController.h"
 
 @interface JHKTabBarController ()
@@ -53,7 +53,7 @@
    self.imageArray = [NSMutableArray arrayWithArray:@[@"首页未点击", @"tabbar题库未点击",@"时间未点击", @"社区未点击", @"我的未点击"]];
     self.selectImageArray = [NSMutableArray arrayWithArray:@[@"首页选中", @"tabbar题库选中",@"时间选中", @"社区选中", @"我的选中"]];
 
-    self.viewControllerArray = [NSMutableArray arrayWithArray:@[@"NextViewController", @"NextViewController", @"NextViewController",@"NextViewController", @"NextViewController"]];
+    self.viewControllerArray = [NSMutableArray arrayWithArray:@[@"ViewController", @"ViewController", @"ViewController",@"ViewController", @"ViewController"]];
 }
 
 - (void)addChildVC:(UIViewController *)viewController title:(NSString *)title normalImage:(UIImage *)normalImage selectedImage:(UIImage *)selectedImage {

@@ -8,6 +8,7 @@
 
 #import <UIKit/UIKit.h>
 #import "GXAnimationBaseDelegate.h"
+#import "JHKNavigationController.h"
 
 /**
  * 自定义转场风格(present/push)
@@ -20,35 +21,19 @@ typedef NS_ENUM(NSUInteger, GXAnimationStyle) {
     /**当前视图与目标视图同时平移（横向向左）*/
     GXAnimationStylePushAllLeft,
     /**当前视图与目标视图同时平移（纵向向上）*/
-    GXAnimationStylePushAllTop,
+//    GXAnimationStylePushAllTop,
     /**当前视图与目标视图同时平移（纵向向下）*/
-    GXAnimationStylePushAllBottom,
+//    GXAnimationStylePushAllBottom,
     /**目标视图扇形旋转*/
-    GXAnimationStyleSector,
+//    GXAnimationStyleSector,
     /**目标视图扇侧立遮盖*/
-    GXAnimationStyleErect,
+//    GXAnimationStyleErect,
     /**当前视图与目标视图呈立方体旋转（横向左）*/
-    GXAnimationStyleCubeLeft,
+//    GXAnimationStyleCubeLeft,
     /**当前视图与目标视图呈立方体旋转（横向右）*/
-    GXAnimationStyleCubeRight,
+//    GXAnimationStyleCubeRight,
     /**当前视图与目标视图呈正反面旋转（横向）*/
-    GXAnimationStyleOglFlip,
-};
-
-/**
- * 系统自带转场风格（present/push）
- * 注意，这里的系统动画由于拿不到动画过程，所以侧滑返回也没有过程！
- */
-typedef NS_ENUM(NSUInteger, GXTransitionStyle) {
-    GXTransitionStyleFade = 0,       // 不支持subtype
-    GXTransitionStylePush,
-    GXTransitionStyleMoveInReveal,
-    GXTransitionStyleCube,
-    GXTransitionStyleOglFlip,
-    GXTransitionStylePageCurl,
-    GXTransitionStyleCameralIris,    // 不支持subtype
-    GXTransitionStyleSuckEffect,     // 不支持subtype
-    GXTransitionStyleRippleEffect,   // 不支持subtype
+//    GXAnimationStyleOglFlip,
 };
 
 NS_ASSUME_NONNULL_BEGIN
