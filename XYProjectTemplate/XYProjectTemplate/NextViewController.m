@@ -23,18 +23,19 @@
     [button addTarget:self action:@selector(buttonClick) forControlEvents:UIControlEventTouchUpInside];
     button.center = self.view.center;
     [self.view addSubview:button];
+    [self addReturnButton];
 }
 
 - (void)buttonClick
 {
     SecondViewController *viewC = [[SecondViewController alloc]init];
-    [self pushViewController:viewC style:GXAnimationStylePushAllLeft interacting:YES];
+    [self.navigationController pushViewController:viewC animated:YES];
 }
 
 
 - (void)dealloc
 {
-    jhkLog(@"释放上一级VC");
+    jhkLog(@"释放上一级NextViewController");
 }
 
 @end

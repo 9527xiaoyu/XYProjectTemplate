@@ -6,7 +6,7 @@
 //
 
 #import "SecondViewController.h"
-
+#import "ThreaViewController.h"
 @interface SecondViewController ()
 
 @end
@@ -15,17 +15,27 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    self.view.backgroundColor = nC10_FFFFFF_white;
     // Do any additional setup after loading the view.
+    UIButton *button = [[UIButton alloc]initWithFrame:CGRectMake(0, 0, 40, 40)];
+    [button setBackgroundColor: nC2_000000_black];
+    [button addTarget:self action:@selector(buttonClick) forControlEvents:UIControlEventTouchUpInside];
+    button.center = self.view.center;
+    [self.view addSubview:button];
+    [self addReturnButton];
 }
 
-/*
-#pragma mark - Navigation
-
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
+- (void)buttonClick
+{
+    ThreaViewController *viewC = [[ThreaViewController alloc]init];
+    [self.navigationController pushViewController:viewC animated:YES];
 }
-*/
+
+
+- (void)dealloc
+{
+    jhkLog(@"释放上一级SecondViewController");
+}
+
 
 @end

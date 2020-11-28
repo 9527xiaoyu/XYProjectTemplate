@@ -32,7 +32,7 @@
 - (void)buttonClick
 {
     NextViewController *viewC = [[NextViewController alloc]init];
-    [self pushViewController:viewC style:GXAnimationStylePushAllLeft interacting:YES];
+    [self.navigationController pushViewController:viewC animated:YES];
 }
 
 @end
